@@ -303,7 +303,6 @@ namespace CertificadosMaster.Controllers
                                 var workbooks = ExcelFile.Load(EndPath);
                                 workbooks.Worksheets.Remove(1);
                                 var saveOptions = new PdfSaveOptions();
-                                saveOptions.ImageDpi = 220;
                                 saveOptions.SelectionType = SelectionType.EntireFile;
                                 workbooks.Save(OutPutPath, saveOptions);
                             }
