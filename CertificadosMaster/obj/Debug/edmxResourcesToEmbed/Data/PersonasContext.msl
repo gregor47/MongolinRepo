@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PersonalModelStoreContainer" CdmEntityContainer="PersonalEntities">
+    <EntitySetMapping Name="DataFinAño">
+      <EntityTypeMapping TypeName="PersonalModel.DataFinAño">
+        <MappingFragment StoreEntitySet="DataFinAño">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CertificadoMatricula">
+      <EntityTypeMapping TypeName="PersonalModel.CertificadoMatricula">
+        <MappingFragment StoreEntitySet="CertificadoMatricula">
+          <ScalarProperty Name="Educacion" ColumnName="Educacion" />
+          <ScalarProperty Name="Grado" ColumnName="Grado" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

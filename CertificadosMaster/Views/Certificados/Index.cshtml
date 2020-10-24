@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Cargar Data";
+
+}
+<script src="~/Js/Jquery.js"></script>
+<script>
+    var URL_ACTION_SubirFinde = '@Url.Action("GenerarFindeAño", "Certificados")';
+    var URL_ACTION_SubirMAtriculados = '@Url.Action("GenerarMatriculado", "Certificados")';
+    var LimiteTamArchivo = 10000000;
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+<script src="~/Js/Certificado.js"></script>
+
+<div class="container">
+    <p class="mt-3"><b style="font-weight:400 !important">Cargar archivo con los datos de los empleados a procesar con la siguiente opcion.</b></p>
+    <br />
+    <div class="row">
+        <!-- #region Cargar Archivo -->
+        <div class="col-md-10 mx-auto" id="divCargarArchivoCorreo">
+            <div class="card">
+                <div class="card-header text-center bg-info"> CARGAR DATA PARA CERTIFICADO ANUAL FIN DE AÑO </div>
+                <form method="post" id="postProcesarFileCorreo" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <p class="">Utilice esta opción para <b style="font-weight:400 !important">Cargar el archivo .xlsx</b> con los datos.</p>
+                                    <p>El archivo excel debera tener el siguiente orden o estructura. <a href="~/Modelos/ModeloFinde.xlsx" download="Modelo Fin de año.xlsx">Clic Aqui para descargar</a></p>
+                                    <p>Nombre,Cargo,Identificacion</p>
+                                    <p>El proceso comenzara a leer los datos a partir de la segunda fila.</p>
+                                    <hr />
+                                </div>
+
+                                <div class="form-group w-100">
+                                    <div class="input-group mb-3">
+                                        <div class="custom-file w-100">
+                                            <input type="file" class="custom-file-input w-100" id="inputFileCorreo" name="inputFile" lang="es">
+                                            <label id="inputFileLabelCorreo" class="custom-file-label" for="inputGroupFile02" aria-describedby="inputFiles">Seleccionar Archivo</label>
+                                        </div>
+                                    </div>
+                                    <small id="inputFilesCorreo" class="form-text text-muted">Formatos Permitidos .xlsx</small>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md text-center">
+                                <button type="submit" class="btn btn-info"><i data-feather="upload-cloud"></i> Cargar Archivo</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </div><hr />
+    <br />
+    <p class="mt-3"><b style="font-weight:400 !important">Cargar archivo con los datos de los estudiantes a procesar con la siguiente opcion.</b></p>
+    <br />
+    <div class="row">
+        <!-- #region Cargar Archivo -->
+        <div class="col-md-10 mx-auto" id="divCargarArchivoCorreo">
+            <div class="card">
+                <div class="card-header text-center bg-info"> CARGAR DATA PARA CERTIFICADO MATRICULA DE ESTUDIANTE </div>
+                <form method="post" id="postProcesarFile" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <p class="">Utilice esta opción para <b style="font-weight:400 !important">Cargar el archivo .xlsx</b> con los datos.</p>
+                                    <p>El archivo excel debera tener el siguiente orden o estructura. <a href="~/Modelos/ModeloMatricula.xlsx" download="Modelo Matriculado.xlsx">Clic Aqui para descargar</a></p>
+                                    <p>Nombre,Documento,TipoDocumento,Grado</p>
+                                    <p>El proceso comenzara a leer los datos a partir de la segunda fila.</p>
+                                    <hr />
+                                </div>
+
+                                <div class="form-group w-100">
+                                    <div class="input-group mb-3">
+                                        <div class="custom-file w-100">
+                                            <input type="file" class="custom-file-input w-100" id="inputFile" name="inputFile" lang="es">
+                                            <label id="inputFile" class="custom-file-label" for="inputGroupFile02" aria-describedby="inputFiles">Seleccionar Archivo</label>
+                                        </div>
+                                    </div>
+                                    <small id="inputFilesCorreo" class="form-text text-muted">Formatos Permitidos .xlsx</small>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md text-center">
+                                <button type="submit" class="btn btn-info"><i data-feather="upload-cloud"></i> Cargar Archivo</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </div><hr />
+
+</div>
+
